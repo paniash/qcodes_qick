@@ -1,10 +1,10 @@
-from .header import *
+from header import *
 
 name = os.path.basename(__file__)[:-3]
 
 readout_pulse.gain.set(0.02)
 readout_pulse.length.set(10e-6)
-readout_adc.length.set(readout_pulse.length.set())
+readout_adc.length.set(readout_pulse.length.get())
 readout.wait_before.set(0)
 readout.wait_after.set(10e-6)
 p = S21Protocol(qick_instrument, readout)
