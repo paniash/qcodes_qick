@@ -60,8 +60,8 @@ class SweepableParameter(Parameter):
             validator = SweepableNumbers(min_value, max_value)
 
         super().__init__(
-            name,
-            instrument,
+            name=name,
+            instrument=instrument,
             label=label,
             unit=unit,
             vals=validator,
